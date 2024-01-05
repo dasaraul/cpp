@@ -1,5 +1,6 @@
 #include<iostream>
 #include<string>
+#include <iomanip>
 
 using namespace std;
 
@@ -17,6 +18,10 @@ struct lsService {
     int subtotal;
 };
 
+void posisi(int x, int y) {
+    cout << "\033[" << y + 1 << ";" << x + 1 << "H";
+}
+
 void garis (const string& str)
     {
         for (int i = 0; i < str.length(); ++i) {
@@ -25,9 +30,14 @@ void garis (const string& str)
     cout << endl;
 }
 
+void header() {
+    posisi(5, 10);
+    cout << "Jasa UPGRADE CVT & PORTING by Tams Garage" << endl;
+    posisi(4, 10);
+    cout << "--==Selamat Datang Di Tams Garage - CVT & PORTING==--" << endl << endl;
+}
 void tampilanAwal() {
-    cout << "\t\t\tJasa UPGRADE CVT & PORTING by Tams Garage" << endl;
-    cout << "\t\t  --==Selamat Datang Di Tams Garage - CVT & PORTING==--" << endl << endl;
+    header();
     garis("--========================================================================================--");
     cout << endl << "Masukan Data Motor Anda :" << endl;
     cout << "1. Input Data & Jenis Motor" << endl;
@@ -38,6 +48,7 @@ void tampilanAwal() {
 
 void inputDataMotor(dataMtr &motor) {
     system("cls");
+    header();
     cout << "-= Masukan Data Diri & Motor Anda =-" << endl;
     garis("--========================================================================================--");
     cout << "Masukan Nama Owner : ";
@@ -57,8 +68,8 @@ void inputDataMotor(dataMtr &motor) {
 }
 
 void inputlsService(lsService &layanan, const dataMtr &motor) {
-    system("cls");
-    cout << "-= Layanan Paket Service Tams Garage =-" << endl;
+    header();
+    cout << endl << "-= Layanan Paket Service Tams Garage =-" << endl;
     garis("--========================================================================================--");
     cout << "1. Porting Polish Motor dibawah 150cc (Rp 550.000)" << endl;
     cout << "2. Upgrade CVT (Rp 650.000)" << endl;
@@ -132,11 +143,13 @@ void hasillsService(const dataMtr &motor, const lsService layanan[], int n) {
 
 void hubungiAdmin() {
     system("cls");
-    cout << "Hubungi Admin" << endl;
+    header();
     garis("--========================================================================================--");
+    cout << "Hubungi Admin" << endl << endl;
     cout << "WhatsApp - 082210819939" << endl;
     cout << "Instagram - @tam.aspx" << endl;
-    cout << "Telegram - @ImTamaa" << endl;
+    cout << "Telegram - @ImTamaa" << endl << endl;
+    garis("--========================================================================================--");
 }
 
 int main() {
@@ -154,6 +167,7 @@ int main() {
                 inputDataMotor(motor);
 
                 int jmlLayanan;
+                header();
                 cout << "-= Kami Menyediakan 4 Layanan, berikut layanan servis kami =-" << endl << endl;
                 cout << "Porting Polish Motor dibawah 150cc (Rp 550.000)" << endl;
                 cout << "Upgrade CVT (Rp 650.000)" << endl;
