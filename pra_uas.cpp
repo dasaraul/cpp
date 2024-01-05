@@ -20,14 +20,14 @@ struct lsService {
 void garis (const string& str)
     {
         for (int i = 0; i < str.length(); ++i) {
-        cout << "--========================================================================================--";
+        cout << "=";
     }
     cout << endl;
 }
 
 void tampilanAwal() {
     cout << "Jasa UPGRADE CVT & PORTING by Tams Garage" << endl;
-    garis();
+    garis("--========================================================================================--");
     cout << "Selamat Datang Di Tams Garage - CVT & PORTING" << endl << endl;
     cout << "Masukan Data Motor Anda :" << endl;
     cout << "1. Input Data & Jenis Motor" << endl;
@@ -39,7 +39,7 @@ void tampilanAwal() {
 void inputDataMotor(dataMtr &motor) {
     system("cls"); 
     cout << "-= Masukan Data Diri & Motor Anda =-" << endl;
-    garis();
+    garis("--========================================================================================--");
     cout << "Masukan Nama Owner : ";
     getline(cin, motor.nOwner);
 
@@ -53,18 +53,18 @@ void inputDataMotor(dataMtr &motor) {
     cin >> motor.ccMotor;
 
     cin.ignore(); 
-    garis();
+    garis("--========================================================================================--");
 }
 
 void inputlsService(lsService &layanan, const dataMtr &motor) {
     system("cls"); 
     cout << "-= Layanan Paket Service Tams Garage =-" << endl;
-    garis();
+    garis("--========================================================================================--");
     cout << "1. Porting Polish Motor dibawah 150cc (Rp 550.000)" << endl;
     cout << "2. Upgrade CVT (Rp 650.000)" << endl;
     cout << "3. Porting Polish Motor diatas 150cc (Rp 850.000)" << endl;
     cout << "4. Service rutin motor Matic (include bersihin blok cvt & sekitarnya) (Rp 200.000)" << endl;
-    garis();
+    garis("--========================================================================================--");
 
     cout << "Masukan Layanan Yang Ingin DI Pilih (sesuaikan dengan cc motor anda): ";
     cin >> layanan.no;
@@ -103,9 +103,9 @@ void hasillsService(const dataMtr &motor, const lsService layanan[], int n) {
     cout << "Nama Owner : " << motor.nOwner << endl << endl;
 
     cout << "List Layanan Service yang diambil" << endl;
-    garis();
+    garis("--========================================================================================--");
     cout << "No.\t\t\tLayanan Service\t\t\tHarga\t\t\tSubtotal" << endl;
-    garis();
+    garis("--========================================================================================--");
 
     int totalPembayaran = 0;
 
@@ -115,7 +115,7 @@ void hasillsService(const dataMtr &motor, const lsService layanan[], int n) {
         cout << layanan[i].no << "\t" << layanan[i].nLayanan << "\t" << layanan[i].harga << "\t\t" << layanan[i].subtotal << endl;
     }
 
-    garis();
+    garis("--========================================================================================--");
     cout << endl << "\t\t\t\t\tTotal Pembayaran     : " << totalPembayaran << endl;
 
     int uangDibayarkan;
@@ -130,7 +130,7 @@ void hasillsService(const dataMtr &motor, const lsService layanan[], int n) {
 void hubungiAdmin() {
     system("cls"); 
     cout << "Hubungi Admin" << endl;
-    garis();
+    garis("--========================================================================================--");
     cout << "WhatsApp - 082210819939" << endl;
     cout << "Instagram - @tam.aspx" << endl;
     cout << "Telegram - @ImTamaa" << endl;
@@ -156,7 +156,7 @@ int main() {
                 cout << "Upgrade CVT (650000)" << endl;
                 cout << "Porting Polish Motor diatas 150cc (850000)" << endl;
                 cout << "Service rutin motor Matic (include bersihin blok cvt & sekitarnya) (200000)" << endl ;
-                garis();
+                garis("--========================================================================================--");
                 cout << "Ingin layanan apa saja yang diinginkan (pilih 1 apabila hanya 1 saja atau bisa pilih beberapa): ";
                 cin >> jmlLayanan;
 
