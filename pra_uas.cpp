@@ -17,7 +17,7 @@ struct lsService {
     int subtotal;
 };
 
-void garis (const string& str) {
+void garis (const string& str)
     {
         for (int i = 0; i < str.length(); ++i) {
         cout << "--========================================================================================--";
