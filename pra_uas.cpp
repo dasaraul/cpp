@@ -36,7 +36,7 @@ void tampilanAwal() {
     cout << "Masukan Pilihan : ";
 }
 
-void inputDataMotor(dataMtr & motor) {
+void inputDataMotor(dataMtr &motor) {
     system("cls");
     cout << "-= Masukan Data Diri & Motor Anda =-" << endl;
     garis("--========================================================================================--");
