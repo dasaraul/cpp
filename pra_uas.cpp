@@ -118,7 +118,7 @@ void hasillsService(const dataMtr &motor, const lsService layanan[], int n) {
 
     cout << "List Layanan Service yang diambil" << endl;
     garis("--========================================================================================--");
-    cout << "No.\tLayanan Service\t\t\tHarga\t\t\tSubtotal" << endl;
+    cout << "No.\tLayanan Service\t\t\t\tHarga\t\t\tSubtotal" << endl;
     garis("--========================================================================================--");
 
     int totalPembayaran = 0;
@@ -126,7 +126,13 @@ void hasillsService(const dataMtr &motor, const lsService layanan[], int n) {
     for (int i = 0; i < n; ++i) {
         totalPembayaran += layanan[i].subtotal;
 
-        cout << layanan[i].no << "\t" << layanan[i].nLayanan << "\t\t\t" << layanan[i].harga << "\t\t\t\t" << layanan[i].subtotal << endl;
+        cout << layanan[i].no << endl;
+        posisi(9, 5);
+        cout << layanan[i].nLayanan << endl;
+       // posisi(19, 5);
+        cout << layanan[i].harga << endl;
+        //posisi(29, 5);
+        cout << layanan[i].subtotal << endl;
     }
 
     garis("--========================================================================================--");
