@@ -31,10 +31,8 @@ void garis (const string& str)
 }
 
 void header() {
-    posisi(5, 10);
-    cout << "Jasa UPGRADE CVT & PORTING by Tams Garage" << endl;
-    posisi(4, 10);
-    cout << "--==Selamat Datang Di Tams Garage - CVT & PORTING==--" << endl << endl;
+    cout << "\t\t\tJasa UPGRADE CVT & PORTING by Tams Garage" << endl;
+    cout << "\t\t  --==Selamat Datang Di Tams Garage - CVT & PORTING==--" << endl << endl;
 }
 void tampilanAwal() {
     header();
