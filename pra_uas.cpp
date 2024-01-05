@@ -26,10 +26,10 @@ void garis (const string& str)
 }
 
 void tampilanAwal() {
-    cout << "Jasa UPGRADE CVT & PORTING by Tams Garage" << endl;
+    cout << "\t\t\tJasa UPGRADE CVT & PORTING by Tams Garage" << endl;
+    cout << "\t\t  --==Selamat Datang Di Tams Garage - CVT & PORTING==--" << endl << endl;
     garis("--========================================================================================--");
-    cout << "Selamat Datang Di Tams Garage - CVT & PORTING" << endl << endl;
-    cout << "Masukan Data Motor Anda :" << endl;
+    cout << endl << "Masukan Data Motor Anda :" << endl;
     cout << "1. Input Data & Jenis Motor" << endl;
     cout << "2. Hubungi Admin" << endl;
     cout << "3. Keluar" << endl;
@@ -155,9 +155,9 @@ int main() {
                 cout << "Porting Polish Motor dibawah 150cc (Rp 550.000)" << endl;
                 cout << "Upgrade CVT (Rp 650.000)" << endl;
                 cout << "Porting Polish Motor diatas 150cc (Rp 850.000)" << endl;
-                cout << "Service rutin motor Matic (include bersihin blok cvt & sekitarnya) (Rp 200.000)" << endl;
+                cout << "Service rutin motor Matic (include bersihin blok cvt & sekitarnya) (Rp 200.000)" << endl << endl;
                 garis("--========================================================================================--");
-                cout << "Ingin layanan apa saja yang diinginkan (pilih 1 apabila hanya 1 saja atau bisa pilih beberapa): ";
+                cout << "Ingin servis apa saja yang diinginkan (pilih jumlah yang diinginkan): ";
                 cin >> jmlLayanan;
 
                 lsService layanan[jmlLayanan];
