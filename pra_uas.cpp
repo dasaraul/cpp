@@ -37,7 +37,7 @@ void tampilanAwal() {
 }
 
 void inputDataMotor(dataMtr &motor) {
-    system("cls"); 
+    system("cls");
     cout << "-= Masukan Data Diri & Motor Anda =-" << endl;
     garis("--========================================================================================--");
     cout << "Masukan Nama Owner : ";
@@ -52,12 +52,12 @@ void inputDataMotor(dataMtr &motor) {
     cout << "CC Motor : ";
     cin >> motor.ccMotor;
 
-    cin.ignore(); 
+    cin.ignore();
     garis("--========================================================================================--");
 }
 
 void inputlsService(lsService &layanan, const dataMtr &motor) {
-    system("cls"); 
+    system("cls");
     cout << "-= Layanan Paket Service Tams Garage =-" << endl;
     garis("--========================================================================================--");
     cout << "1. Porting Polish Motor dibawah 150cc (Rp 550.000)" << endl;
@@ -99,7 +99,7 @@ void inputlsService(lsService &layanan, const dataMtr &motor) {
 }
 
 void hasillsService(const dataMtr &motor, const lsService layanan[], int n) {
-    system("cls"); 
+    system("cls");
     cout << "Nama Owner : " << motor.nOwner << endl << endl;
 
     cout << "List Layanan Service yang diambil" << endl;
@@ -128,7 +128,7 @@ void hasillsService(const dataMtr &motor, const lsService layanan[], int n) {
 }
 
 void hubungiAdmin() {
-    system("cls"); 
+    system("cls");
     cout << "Hubungi Admin" << endl;
     garis("--========================================================================================--");
     cout << "WhatsApp - 082210819939" << endl;
@@ -146,16 +146,16 @@ int main() {
 
         switch (noUrut) {
             case 1: {
-                cin.ignore(); 
+                cin.ignore();
                 dataMtr motor;
                 inputDataMotor(motor);
 
                 int jmlLayanan;
                 cout << "-= Kami Menyediakan 4 Layanan, berikut layanan servis kami =-" << endl << endl;
-                cout << "Porting Polish Motor dibawah 150cc (550000)" << endl;
-                cout << "Upgrade CVT (650000)" << endl;
-                cout << "Porting Polish Motor diatas 150cc (850000)" << endl;
-                cout << "Service rutin motor Matic (include bersihin blok cvt & sekitarnya) (200000)" << endl ;
+                cout << "Porting Polish Motor dibawah 150cc (Rp 550.000)" << endl;
+                cout << "Upgrade CVT (Rp 650.000)" << endl;
+                cout << "Porting Polish Motor diatas 150cc (Rp 850.000)" << endl;
+                cout << "Service rutin motor Matic (include bersihin blok cvt & sekitarnya) (Rp 200.000)" << endl;
                 garis("--========================================================================================--");
                 cout << "Ingin layanan apa saja yang diinginkan (pilih 1 apabila hanya 1 saja atau bisa pilih beberapa): ";
                 cin >> jmlLayanan;
@@ -170,14 +170,14 @@ int main() {
 
                 cout << "Ingin Input dari awal lagi? [Y / N] : ";
                 cin >> ReInput;
-                cin.ignore(); 
+                cin.ignore();
                 break;
             }
             case 2:
                 hubungiAdmin();
                 cout << "Ingin Input dari awal lagi? [Y / N] : ";
                 cin >> ReInput;
-                cin.ignore(); 
+                cin.ignore();
                 break;
             case 3:
                 cout << "Terima kasih telah menggunakan layanan kami!" << endl;
@@ -186,7 +186,8 @@ int main() {
                 cout << "Pilihan tidak valid." << endl;
                 return 0;
         }
-    } while (ReInput == 'Y' || ReInput == 'y');
+    }
+    while (ReInput == 'Y' || ReInput == 'y');
 
     return 0;
 }
