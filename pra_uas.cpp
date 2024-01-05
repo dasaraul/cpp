@@ -130,12 +130,12 @@ void hasillsService(const dataMtr &motor, const lsService layanan[], int n) {
     for (int i = 0; i < n; ++i) {
         totalPembayaran += layanan[i].subtotal;
 
-        cout << layanan[i].no;
-        posisi(8, 6);
+        cout << layanan[i].no << endl;
+        posisi(8, 5);
         cout << layanan[i].nLayanan;
-        posisi(48, 7);
+        posisi(48, 6);
         cout << layanan[i].harga;
-        posisi(72, 8);
+        posisi(72, 7);
         cout << layanan[i].subtotal << endl;
     }
 
