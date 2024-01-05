@@ -34,7 +34,6 @@ void header() {
 void tampilanAwal() {
     system("cls");
     header();
-    cout << endl;
     garis();
     cout << endl;
     cout << endl << "Masukan Data Motor Anda :" << endl;
@@ -80,7 +79,7 @@ void inputlsService(lsService &layanan, const dataMtr &motor) {
         garis();
     cout << endl;
 
-    cout << "Masukan Layanan Yang Ingin DI Pilih (sesuaikan dengan cc motor anda): ";
+    cout << endl << "Masukan Layanan Yang Ingin DI Pilih (sesuaikan dengan cc motor anda): ";
     cin >> layanan.no;
 
     switch (layanan.no) {
@@ -132,25 +131,24 @@ void hasillsService(const dataMtr &motor, const lsService layanan[], int n) {
         totalPembayaran += layanan[i].subtotal;
 
         cout << layanan[i].no;
-        posisi(8, 5);
+        posisi(8, 6);
         cout << layanan[i].nLayanan;
-        posisi(48, 5);
+        posisi(48, 7);
         cout << layanan[i].harga;
-        posisi(72, 5);
+        posisi(72, 8);
         cout << layanan[i].subtotal << endl;
     }
 
         garis();
     cout << endl;
-    cout << endl << "\t\t\t\t\tTotal Pembayaran     : " << totalPembayaran << endl;
+    cout << endl << "\t\t\t\t\t\t\tTotal Pembayaran     : " << totalPembayaran << endl;
 
     int uangDibayarkan;
-    cout << "\t\t\t\t\tUang Yang Dibayar    : ";
+    cout << "\t\t\t\t\t\t\tUang Yang Dibayar    :   ";
     cin >> uangDibayarkan;
 
-    int uangKembali = uangDibayarkan - totalPembayaran;
-
-    cout << "\t\t\t\t\tUang Kembali : " << uangKembali << endl;
+    int kembalian = uangDibayarkan - totalPembayaran;
+    cout << "\t\t\t\t\t\t\tUang Kembali : " << kembalian << endl;
 }
 
 void hubungiAdmin() {
@@ -182,13 +180,15 @@ int main() {
 
                 int jmlLayanan;
                 header();
-                cout << "-= Kami Menyediakan 4 Layanan, berikut layanan servis kami =-" << endl << endl;
+                cout << "-= Kami Menyediakan 4 Layanan, berikut layanan servis kami =-" << endl;
+                garis();
+                cout << endl;
                 cout << "Porting Polish Motor dibawah 150cc (Rp 550.000)" << endl;
                 cout << "Upgrade CVT (Rp 650.000)" << endl;
                 cout << "Porting Polish Motor diatas 150cc (Rp 850.000)" << endl;
-                cout << "Service rutin motor Matic ) (Rp 200.000)" << endl << endl;
-                    garis();
-    cout << endl;
+                cout << "Service rutin motor Matic ) (Rp 200.000)" << endl;
+                garis();
+                cout << endl << endl;
                 cout << "Ingin servis apa saja yang diinginkan (pilih jumlah yang diinginkan): ";
                 cin >> jmlLayanan;
                 system("cls");
