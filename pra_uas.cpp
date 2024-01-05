@@ -89,6 +89,9 @@ void inputlsService(lsService &layanan, const dataMtr &motor) {
             if (motor.jnsMtr == "matic" || motor.jnsMtr == "Matic") {
                 layanan.harga += 50000;
             }
+
+            if (motor.jnsMtr == "manual" || motor.jnsMtr == "Manual") {
+            }
             break;
         default:
             cout << "!! NULL !!" << endl;
