@@ -125,29 +125,29 @@ void hasillsService(const dataMtr &motor, const lsService layanan[], int n) {
         garis();
     cout << endl;
 
-    int totalPembayaran = 0;
+    int totalbyrayaran = 0;
 
-    for (int i = 0; i < n; ++i) {
-        totalPembayaran += layanan[i].subtotal;
+    for (int byr = 0; byr < n; ++byr) {
+        totalbyrayaran += layanan[byr].subtotal;
 
-        cout << layanan[i].no << endl;
-        posisi(8, 5);
-        cout << layanan[i].nLayanan;
-        posisi(48, 6);
-        cout << layanan[i].harga;
-        posisi(72, 7);
-        cout << layanan[i].subtotal << endl;
+        cout << layanan[byr].no;
+        posisi(8, 6);
+        cout << layanan[byr].nLayanan;
+        posisi(48, 7);
+        cout << layanan[byr].harga;
+        posisi(72, 8);
+        cout << layanan[byr].subtotal << endl;
     }
 
         garis();
     cout << endl;
-    cout << endl << "\t\t\t\t\t\t\tTotal Pembayaran     : " << totalPembayaran << endl;
+    cout << endl << "\t\t\t\t\t\t\tTotal byrayaran     : " << totalbyrayaran << endl;
 
     int uangDibayarkan;
     cout << "\t\t\t\t\t\t\tUang Yang Dibayar    :   ";
     cin >> uangDibayarkan;
 
-    int kembalian = uangDibayarkan - totalPembayaran;
+    int kembalian = uangDibayarkan - totalbyrayaran;
     cout << "\t\t\t\t\t\t\tUang Kembali : " << kembalian << endl;
 }
 
