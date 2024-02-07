@@ -4,14 +4,14 @@
 
 using namespace std;
 
-struct dataMtr {
+struct dataMtr { //dataMtr.nOwner
     string nOwner;
     string jnsMtr;
     string PltMtr;
     int ccMotor;
 };
 
-struct lsService {
+struct lsService { //list
     int no;
     string nLayanan;
     int harga;
@@ -19,11 +19,10 @@ struct lsService {
 };
 
 void posisi(int x, int y) {
-    cout << "\033[" << y + 1 << ";" << x + 1 << "H";
+    std::cout << "\033[" << y + 1 << ";" << x + 1 << "H";
 }
 
-void garis ()
-    {
+void garis() {
         cout << "--========================================================================================--";
     }
 
@@ -31,6 +30,7 @@ void header() {
     cout << "\t\t\tJasa UPGRADE CVT & PORTING by Tams Garage" << endl;
     cout << "\t\t  --==Selamat Datang Di Tams Garage - CVT & PORTING==--" << endl << endl;
 }
+
 void tampilanAwal() {
     system("cls");
     header();
@@ -125,10 +125,10 @@ void hasillsService(const dataMtr &motor, const lsService layanan[], int n) {
         garis();
     cout << endl;
 
-    int totalbyrayaran = 0;
+    int totalbayaran = 0;
 
     for (int byr = 0; byr < n; ++byr) {
-        totalbyrayaran += layanan[byr].subtotal;
+        totalbayaran += layanan[byr].subtotal;
 
         cout << layanan[byr].no;
         posisi(8, 6);
@@ -141,13 +141,13 @@ void hasillsService(const dataMtr &motor, const lsService layanan[], int n) {
 
         garis();
     cout << endl;
-    cout << endl << "\t\t\t\t\t\t\tTotal byrayaran     : " << totalbyrayaran << endl;
+    cout << endl << "\t\t\t\t\t\t\tTotal     : " << totalbayaran << endl;
 
     int uangDibayarkan;
     cout << "\t\t\t\t\t\t\tUang Yang Dibayar    :   ";
     cin >> uangDibayarkan;
 
-    int kembalian = uangDibayarkan - totalbyrayaran;
+    int kembalian = uangDibayarkan - totalbayaran;
     cout << "\t\t\t\t\t\t\tUang Kembali : " << kembalian << endl;
 }
 
@@ -179,15 +179,15 @@ int main() {
                 inputDataMotor(motor);
 
                 int jmlLayanan;
-                header();
+                    header();
                 cout << "-= Kami Menyediakan 4 Layanan, berikut layanan servis kami =-" << endl;
-                garis();
+                    garis();
                 cout << endl;
                 cout << "Porting Polish Motor dibawah 150cc (Rp 550.000)" << endl;
                 cout << "Upgrade CVT (Rp 650.000)" << endl;
                 cout << "Porting Polish Motor diatas 150cc (Rp 850.000)" << endl;
                 cout << "Service rutin motor Matic ) (Rp 200.000)" << endl;
-                garis();
+                    garis();
                 cout << endl << endl;
                 cout << "Ingin servis apa saja yang diinginkan (pilih jumlah yang diinginkan): ";
                 cin >> jmlLayanan;
@@ -195,11 +195,11 @@ int main() {
 
                 lsService layanan[jmlLayanan];
 
-                for (int i = 0; i < jmlLayanan; ++i) {
-                    inputlsService(layanan[i], motor);
+                for (int lyn = 0; lyn < jmlLayanan; ++lyn) {
+                    inputlsService(layanan[lyn], motor);
                 }
 
-                header();
+                    header();
                 hasillsService(motor, layanan, jmlLayanan);
 
                 cout << "Ingin Input dari awal lagi? [Y / N] : ";
@@ -222,6 +222,6 @@ int main() {
         }
     }
     while (ReInput == 'Y' || ReInput == 'y');
-
+    while (ReInput == 'N' || ReInput == 'n');
     return 0;
 }
